@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Jomhuria&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mirza:wght@400;600;700&display=swap');
+
+html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Mirza', cursive;
+    background-color: #E5E5E5;
+}
+.scrollDown {
+    position: absolute;
+    top: 5em;
+    left: 10em;
+}
+svg #wheel {
+    animation: scroll ease 1.5s infinite;
+}
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(100px);
+    }
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 90%;
+    height: auto;
+    z-index: -5;
+}
+header{
+
+    .logo {
+        width: 16em;
+        height: fit-content;
+        margin: 25em auto 8em auto;
+        padding: 1em;
+        z-index: 5;
+        background-color: #FFF;
+        border-radius: 1.8em;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
+        // flex-wrap: wrap;
+
+        h1 {
+            color: #000;
+            font-weight: lighter;
+            font-family: Jomhuria, cursive;
+            font-size: 4em;
+            text-align: center;
+            line-height: 1em;
+        }
+        img {
+            position: relative;
+            width: 100%;
+        }
+    }
+}
+main {
+    margin: 0 4em 15em;
+    width: fit-content;
+    height: auto;
+    background-color: #FFF;
+    border-radius: 1.8em;
+    padding: 2em;
+    h2 {
+        color: #000;
+        font-size: 2em;
+        font-weight: 700;
+        display: block;
+    }
+    h3 {
+        color: #C50A0A;
+        font-weight: 600;
+        font-size: 1.5em;
+    }
+    p {
+        color: #000;
+        font-size: 1.3em;
+        font-weight: 400;
+        line-height: 2.5em;
+    }
+}
+aside {
+    div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        a {
+            text-decoration: none;
+            cursor: pointer;
+            }
+        span {
+            color: #C50A0A;
+            }
+        h3{
+            font-size: 1.5em;
+            color: #000;
+            }
+
+        .card {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+
+
+            .flipcard {
+                width: 19em;
+                height: 23em;
+                border-radius: 2.3em;
+                box-shadow: 10px 20px 40px 2px rgba(0, 0, 0, 0.4);
+                background: url(../images/RUTA2-3.jpg);            
+                transition: transform 1s linear,
+                            background-image 0s linear .38s;
+            }
+            .flipcard:hover {
+            transform: perspective(600px) rotateY(-180deg);
+            background-image: url(../images/RUTA2-5.jpg);
+            }
+        }
+
+    }
+}
+footer {
+    // border: 2px #000 solid;
+    width: 100%;
+    height: auto;
+    margin: 15em auto;
+    margin-bottom: 0;
+    text-align: center;
+
+    fieldset {
+        background-color: #FFF;
+        position: relative;
+        width: 20em;
+        height: auto;
+        border: 2px #C50A0A solid;
+        border-radius: 2.8em;
+        margin: 0 auto;
+        padding: 2em;
+
+        legend {
+
+            text-align: center;
+            display: inline-block;
+            color: #FFF;
+            background-color: #E5E5E5;
+            border-top: 2px #C50A0A solid;
+            border-radius: 1.8em;
+            font-size: 3em;
+            -webkit-text-stroke: 2px #000;
+            padding: .3em;
+        }
+        label[for="name"], label[for="message"]{
+            font-size: 1.7em;
+            font-weight: 400;
+            display: inline-block;
+            padding: 1em;
+            text-align: center;
+        }
+        .input{
+            border-radius: 1.8em;
+            padding: 0.5em;
+            transition: all .5s ease;
+            background-color: #E5E5E5;  
+
+        }
+        .input:focus {
+            font-size: 1em;
+            font-family: cursive;
+            padding: 1em 0;
+            margin: 1em 0;
+            background-color: #c50a0aa1;
+            color: #fff;
+        }
+        #no-name, #anonymous {
+            padding: 0.5em;
+            margin-bottom: 2em;
+            font-size: 1.3em;
+            cursor: pointer;
+        }
+        input[type="submit"] {
+            border-radius: 1em;
+            color: #000;
+            font-size: 1.3em;
+            font-weight: 600;
+            background: #c50a0aa1;
+            padding: .5em;
+            transition: all .5s ease-in-out;
+        }
+        input[type="submit"]:hover {
+            background: #C50A0A;
+            cursor: pointer;
+            color: #FFF;
+        }
+    }
+}
+.git {
+        position: relative;
+        margin: 5em auto -1em;
+        width: 100%;
+        height: 3em;
+        background: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 2em;
+        }
+}
+@media only screen and(max-width: 1250px){
+    aside {
+        div {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                gap: 5em;
+                align-content: center;
+            }
+        }
+}
+@media only screen and(max-width: 800px){
+    .background {
+        display: none;
+    }
+    .mobile {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 80vh;
+        background: url(../images/institut.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -50;
+    }
+    svg {
+        display: none;
+    }
+    header {
+         .logo {
+        margin-top: 18em;
+        }
+    }
+    main {
+        margin: 0;
+        margin-bottom: 8em;
+    }
+    footer {
+        margin-top: 8em;
+
+        fieldset {
+            width: min-content;
+            margin: 0 auto;
+        }
+    }
+}
